@@ -1,0 +1,16 @@
+<div class="container mt-5">
+    <div class="card">
+        <h4 class="card-header">Post</h4>
+        <div class="card-body">
+            <div class="container d-flex justify-content-center" id="loading">
+                <div class="spinner-border d-flex justify-content-center" role="status" *ngIf="loading">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+            <p class="card-text">{{ p!.id }}</p>
+            <h5 class="card-title">{{ p!.title }}</h5>
+            <p class="card-text">{{ p!.body }}</p>
+        </div>
+    </div>
+    <button type="button" class="btn btn-primary mt-4" [routerLink]="['/post']" routerLinkActive="router-link-active">Back</button>
+</div>
