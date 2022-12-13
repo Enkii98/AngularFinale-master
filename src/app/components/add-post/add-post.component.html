@@ -1,0 +1,13 @@
+<div class="container text-center mt-5">
+    <form #form="ngForm" (ngSubmit)="publica(form)">
+            <div class="mb-4 form-group">
+                <label for="title" class="form-label mb-3 fs-4">Inserisci titolo</label>
+                <input name="title" type="text" class="form-control" id="title" required ngModel >
+            </div>
+            <div class="form-group">
+                <label for="body" class="form-label mb-3 fs-4">Inserisci contenuto</label>
+                <input type="body" name="body" class="form-control" id="body" required ngModel >
+            </div>
+            <button type="submit" class="btn btn-success mt-4" [disabled]="form.invalid">Publish</button>
+    </form>
+</div>
