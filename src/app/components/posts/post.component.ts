@@ -3,6 +3,7 @@ import { Post } from 'src/app/models/post.interface';
 import { HttpClient } from '@angular/common/http';
 import { Subscription } from 'rxjs';
 import { PostsService } from 'src/app/service/posts.service';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-post',
@@ -15,7 +16,7 @@ export class PostComponent implements OnInit {
     posts: Post[] | undefined
     loading = true;
 
-    constructor(private http: HttpClient, private pstSrv: PostsService) { }
+    constructor(private http: HttpClient, private pstSrv: PostsService, private router: Router) { }
 
     ngOnInit(): void {
         this.getPost();

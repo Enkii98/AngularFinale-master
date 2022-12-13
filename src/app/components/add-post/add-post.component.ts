@@ -15,10 +15,16 @@ export class AddPostComponent implements OnInit {
     ngOnInit(): void {
     }
 
+    postForm: any = {
+        title: '',
+        body: ''
+    }
+
     publica(form: NgForm) {
         console.log(form.value);
         try {
             this.postData.addPost(form.value).subscribe();
+            form.reset();
         }
         catch (error) {
             console.error(error);

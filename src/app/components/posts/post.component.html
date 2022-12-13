@@ -10,10 +10,10 @@
             <p class="card-text">{{ post.id }}</p>
             <h5 class="card-title">{{ post.title }}</h5>
             <p class="card-text">{{ post.body }}</p>
-            <div class="container text-center">
-                <button type="button" class="btn btn-success me-4" [routerLink]="['/edit', post.id]" routerLinkActive="router-link-active">Edit</button>
-                <button type="button" class="btn btn-primary me-4" [routerLink]="['/dettagli', post.id]" routerLinkActive="router-link-active">View</button>
-                <button type="button" class="btn btn-danger" (click)="cancella(post.id)">Delete</button>
+            <div class="container text-center mt-4 mb-2">
+                <button type="button" class="btn btn-success me-4 text-white fs-5" [routerLink]="['/edit', post.id]" routerLinkActive="router-link-active"><i class="bi bi-pencil-fill"></i></button>
+                <button type="button" class="btn btn-primary me-4 text-white fs-5" [routerLink]="['/dettagli', post.id]" routerLinkActive="router-link-active"><i class="bi bi-eye"></i></button>
+                <button type="button" class="btn btn-danger text-white fs-5" (click)="cancella(post.id)"><i class="bi bi-trash3"></i></button>
             </div>
         </div>
     </div>

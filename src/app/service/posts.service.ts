@@ -17,8 +17,8 @@ export class PostsService {
     addPost(data: { title: string; body: string }) {
        return this.http.post('http://localhost:4201/posts', data);
     }
-}
 
-export async function detailsPosts(): Promise<Post[]> {
-    return await (await fetch('http://localhost:4201/posts')).json()
+    updatePost(post: Post) {
+        return this.http.put<Post>(`http://localhost:4201/posts/${post.id}`, post);
+    }
 }
