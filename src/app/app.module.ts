@@ -12,6 +12,7 @@ import { HomeComponent } from './components/home/home.component';
 import { DettagliPostComponent } from './components/dettagli-post/dettagli-post.component';
 import { AddPostComponent } from './components/add-post/add-post.component';
 import { EditPostComponent } from './components/edit-post/edit-post.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const routes: Route[] = [
     {
@@ -53,7 +54,8 @@ const routes: Route[] = [
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
