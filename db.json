@@ -1,4 +1,12 @@
 {
+  "users": [
+    {
+      "email": "flavio@flavio.com",
+      "password": "$2a$10$NsLKhXTcZsrx5M5vX2hLU.agmemPuluTV/HoXJqlr.d/EYKbb7FeW",
+      "name": "Flavio",
+      "id": 1
+    }
+  ],
   "posts": [
     {
       "userId": 1,

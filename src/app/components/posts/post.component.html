@@ -1,4 +1,5 @@
-<div class="container">
+<app-navbar></app-navbar>
+<div class="container" id="post">
     <div class="container d-flex justify-content-center mt-3" id="loading">
         <div class="spinner-border d-flex justify-content-center" role="status" *ngIf="loading">
             <span class="visually-hidden">Loading...</span>
@@ -18,7 +19,6 @@
         </div>
     </div>
 </div>
-<!-- <ngb-pagination class="pagination" [pageSize]="10" [collectionSize]="posts!.length" [(page)]="page" aria-label="Default pagination"></ngb-pagination> -->
 <ngb-pagination [collectionSize]="posts!.length" [(page)]="page" [boundaryLinks]="true">
     <ng-template ngbPaginationPages let-page let-pages="pages">
       <li class="ngb-custom-pages-item" *ngIf="pages.length > 0">
