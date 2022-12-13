@@ -1,0 +1,11 @@
+<app-navbar></app-navbar>
+<div class="container text-center" id="home">
+    <h1 class="my-5">Benvenuto sulla home page</h1>
+</div>
+<div class="container mt-5 d-flex justify-content-evenly">
+    <button class="btn btn-primary me-5" [routerLink]="['/post']" routerLinkActive="active">Posts</button>
+    <button class="btn btn-success" [routerLink]="['/addPost']" routerLinkActive="active">Add Post</button>
+</div>
+<router-outlet></router-outlet>
+
+

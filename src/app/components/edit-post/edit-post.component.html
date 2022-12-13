@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+<div class="container" id="edit">
+    <div class="container text-center">
+        <h2 class="mb-5">Edit post</h2>
+        <div class="container d-flex justify-content-center mb-3" id="loading">
+            <div class="spinner-border d-flex justify-content-center" role="status" *ngIf="loading">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+        <form #form="ngForm" (ngSubmit)="update(form)">
+                <div class="mb-4 form-group">
+                    <label for="title" class="form-label mb-3 fs-4">Inserisci titolo</label>
+                    <input name="title" type="text" class="form-control" id="title" [(ngModel)]="p!.title" [ngModelOptions]="{ standalone: true }" ngModel>
+                </div>
+                <div class="form-group">
+                    <label for="body" class="form-label mb-3 fs-4">Inserisci contenuto</label>
+                    <textarea type="body" name="body" class="form-control" id="body" [(ngModel)]="p!.body" [ngModelOptions]="{ standalone: true }" ngModel></textarea>
+                </div>
+                <button type="submit" class="btn btn-success mt-4">Edit</button>
+        </form>
+    </div>
+    <div class="container">
+      <button type="button" class="btn btn-primary mt-5 text-white fs-5" [routerLink]="['/post']" routerLinkActive="router-link-active"><i class="bi bi-arrow-left"></i></button>
+    </div>
+</div>
