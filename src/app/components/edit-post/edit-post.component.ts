@@ -40,8 +40,9 @@ export class EditPostComponent implements OnInit {
             body: this.p!.body,
             userId: this.p!.userId,
             img1: this.p!.img1,
-            img2: this.p!.img2,
-            img3: this.p!.img3
+            ingredienti: this.p!.ingredienti,
+            ricetta: this.p!.ricetta,
+            categoria: this.p!.categoria
         }
         console.log(post);
         this.pstSrv.updatePost(post).subscribe();

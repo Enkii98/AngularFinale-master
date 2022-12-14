@@ -4,6 +4,7 @@ export interface Post {
     title: string,
     body: string
     img1: any,
-    img2: any,
-    img3: any
+    ingredienti: string,
+    categoria: string,
+    ricetta: string
 }

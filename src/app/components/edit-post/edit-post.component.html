@@ -20,12 +20,22 @@
                     <textarea type="img1" name="img1" class="form-control" id="img1" [(ngModel)]="p!.img1" [ngModelOptions]="{ standalone: true }" ngModel></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="img2" class="form-label mb-3 fs-4">Aggiorna la seconda foto</label>
-                    <textarea type="img2" name="img2" class="form-control" id="img2" [(ngModel)]="p!.img2" [ngModelOptions]="{ standalone: true }" ngModel></textarea>
+                    <label for="ingredienti" class="form-label mb-3 fs-4">Aggiorna gli ingredienti</label>
+                    <textarea type="ingredienti" name="ingredienti" class="form-control" id="ingredienti" [(ngModel)]="p!.ingredienti" [ngModelOptions]="{ standalone: true }" ngModel></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="img3" class="form-label mb-3 fs-4">Aggiorna la terza foto</label>
-                    <textarea type="img3" name="img3" class="form-control" id="img3" [(ngModel)]="p!.img3" [ngModelOptions]="{ standalone: true }" ngModel></textarea>
+                    <label for="ricetta" class="form-label mb-3 fs-4">Aggiorna la ricetta</label>
+                    <textarea type="ricetta" name="ricetta" class="form-control" id="ricetta" [(ngModel)]="p!.ricetta" [ngModelOptions]="{ standalone: true }" ngModel></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="categoria" class="form-label mb-3 fs-4">Aggiorna la categoria</label>
+                    <select type="categoria" name="categoria" class="form-select" id="categoria" [(ngModel)]="p!.categoria" [ngModelOptions]="{ standalone: true }" ngModel>
+                        <option value="antipasti">Antipasti</option>
+                        <option value="primi">Primi</option>
+                        <option value="secondi">Secondi</option>
+                        <option value="contorni">Contorni</option>
+                        <option value="dolci">Dolci</option>
+                    </select>
                 </div>
                 <button type="submit" class="btn btn-success mt-4">Edit</button>
         </form>
