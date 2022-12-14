@@ -1,18 +1,20 @@
 <app-navbar></app-navbar>
 <div class="container" id="view">
-    <h2 class="mb-5 text-center">Details post</h2>
-    <div class="card">
-        <h4 class="card-header">Post</h4>
-        <div class="card-body">
-            <div class="container d-flex justify-content-center" id="loading">
-                <div class="spinner-border d-flex justify-content-center" role="status" *ngIf="loading">
-                    <span class="visually-hidden">Loading...</span>
-                </div>
-            </div>
-            <p class="card-text">{{ p!.id }}</p>
-            <h5 class="card-title">{{ p!.title }}</h5>
-            <p class="card-text">{{ p!.body }}</p>
+    <h2 class="mb-5 text-center">Dettagli Ricetta</h2>
+    <div class="container d-flex justify-content-center" id="loading">
+        <div class="spinner-border d-flex justify-content-center" role="status" *ngIf="loading">
+            <span class="visually-hidden">Loading...</span>
         </div>
     </div>
-    <button type="button" class="btn btn-primary mt-4 text-white fs-5" [routerLink]="['/post']" routerLinkActive="router-link-active"><i class="bi bi-arrow-left"></i></button>
+    <div class="container text-center">
+      <h2 class="card-title fw-bold mb-3">{{ p!.title }}</h2>
+      <p>Categoria: {{ p!.categoria }}</p>
+      <p>{{ p!.body }}</p>
+      <h4 class="mt-4 mb-3">Ingredienti:</h4>
+      <p>{{ p!.ingredienti }}</p>
+      <h4 class="mt-4 mb-3">Pricedimento:</h4>
+      <p class="card-text">{{ p!.ricetta }}</p>
+    </div>
+    <button type="button" class="btn btn-primary mt-5 text-white fs-5" [routerLink]="['/post']" routerLinkActive="router-link-active"><i class="bi bi-arrow-left"></i></button>
 </div>
+<app-footer></app-footer>

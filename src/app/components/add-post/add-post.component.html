@@ -9,6 +9,18 @@
             <label for="body" class="form-label mb-3 fs-4">Inserisci contenuto</label>
             <input type="body" name="body" class="form-control" id="body" required ngModel>
         </div>
+        <div class="form-group">
+            <label for="ingredienti" class="form-label mb-3 fs-4 mt-3">Inserisci Ingredienti</label>
+            <input type="ingredienti" name="ingredienti" class="form-control" id="ingredienti" required ngModel>
+        </div>
+        <div class="form-group">
+            <label for="ricetta" class="form-label mb-3 fs-4 mt-3">Inserisci Ricetta</label>
+            <input type="ricetta" name="ricetta" class="form-control" id="ricetta" required ngModel>
+        </div>
+        <div class="form-group">
+            <label for="categoria" class="form-label mb-3 fs-4 mt-3">Inserisci una categorai (Antipasti, Primi piatti, Secondi piatti, Dolci)</label>
+            <input type="categorai" name="categoria" class="form-control" id="categoria" required ngModel>
+        </div>
         <button type="submit" class="btn btn-success mt-4" [disabled]="form.invalid">Publish</button>
     </form>
 </div>

@@ -5,41 +5,21 @@
             <span class="visually-hidden">Loading...</span>
         </div>
     </div>
-    <div class="card my-4" *ngFor="let post of posts | slice: (page -1) * pageSize : (page -1) * pageSize + pageSize">
-        <h4 class="card-header">Post</h4>
+    <div class="card my-4" *ngFor="let post of posts">
         <div class="card-body">
-            <p class="card-text">{{ post.id }}</p>
-            <h5 class="card-title">{{ post.title }}</h5>
+            <h3 class="card-title fw-bold">{{ post.title }}</h3>
             <p class="card-text">{{ post.body }}</p>
             <div class="container text-center mt-4 mb-2">
-                <button type="button" class="btn btn-success me-4 text-white fs-5" [routerLink]="['/edit', post.id]" routerLinkActive="router-link-active"><i class="bi bi-pencil-fill"></i></button>
-                <button type="button" class="btn btn-primary me-4 text-white fs-5" [routerLink]="['/dettagli', post.id]" routerLinkActive="router-link-active"><i class="bi bi-eye"></i></button>
-                <button type="button" class="btn btn-danger text-white fs-5" (click)="cancella(post.id)"><i class="bi bi-trash3"></i></button>
+                <button type="button" class="btn btn-success me-4 text-white fs-5 rounded-circle"
+                    [routerLink]="['/edit', post.id]" routerLinkActive="router-link-active"><i
+                        class="bi bi-pencil"></i></button>
+                        <button type="button" class="btn btn-warning text-white me-4 rounded-pill"
+                    [routerLink]="['/dettagli', post.id]" routerLinkActive="router-link-active">Leggi ricetta <i
+                        class="bi bi-chevron-right"></i></button>
+                <button type="button" class="btn btn-danger text-white fs-5 rounded-circle"
+                    (click)="cancella(post.id)"><i class="bi bi-trash3"></i></button>
             </div>
         </div>
     </div>
 </div>
-<ngb-pagination [collectionSize]="posts!.length" [(page)]="page" [boundaryLinks]="true">
-    <ng-template ngbPaginationPages let-page let-pages="pages">
-      <li class="ngb-custom-pages-item" *ngIf="pages.length > 0">
-        <div class="mb-3 d-flex flex-nowrap px-2">
-          <label id="paginationInputLabel" for="paginationInput" class="col-form-label me-2 ms-1">Page</label>
-          <input
-            #i
-            type="text"
-            inputmode="numeric"
-            pattern="[0-9]*"
-            class="form-control custom-pages-input"
-            id="paginationInput"
-            [value]="page"
-            (keyup.enter)="selectPage(i.value)"
-            (blur)="selectPage(i.value)"
-            (input)="formatInput($any($event).target)"
-            aria-labelledby="paginationInputLabel paginationDescription"
-            style="width: 2.5rem"
-          />
-          <span id="paginationDescription" class="col-form-label text-nowrap px-2"> of {{pages.length}}</span>
-        </div>
-      </li>
-    </ng-template>
-  </ngb-pagination>
+<app-footer></app-footer>

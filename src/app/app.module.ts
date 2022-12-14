@@ -12,6 +12,7 @@ import { DettagliPostComponent } from './components/dettagli-post/dettagli-post.
 import { AddPostComponent } from './components/add-post/add-post.component';
 import { EditPostComponent } from './components/edit-post/edit-post.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     DettagliPostComponent,
     AddPostComponent,
     EditPostComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
