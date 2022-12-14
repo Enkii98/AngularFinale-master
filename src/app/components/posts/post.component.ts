@@ -5,6 +5,7 @@ import { Subscription } from 'rxjs';
 import { PostsService } from 'src/app/service/posts.service';
 import { Router } from '@angular/router';
 
+const FILTER_PAG_REGEX = /[^0-9]/g;
 @Component({
     selector: 'app-post',
     templateUrl: './post.component.html',
@@ -12,11 +13,17 @@ import { Router } from '@angular/router';
 })
 export class PostComponent implements OnInit {
     page = 1;
-
+    selectPage(page: string) {
+        this.page = parseInt(page, 10) || 1;
+      }
+      formatInput(input: HTMLInputElement) {
+        input.value = input.value.replace(FILTER_PAG_REGEX, '');
+      }
     sub!: Subscription
-    posts: Post[] | undefined
+    posts: Post[] | undefined;
     loading = true;
     pageSize= 10;
+    searchText!: string;
 
     constructor(private http: HttpClient, private pstSrv: PostsService, private router: Router) { }
 

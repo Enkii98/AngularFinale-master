@@ -47,7 +47,7 @@ const routes: Route[] = [
     HomeComponent,
     DettagliPostComponent,
     AddPostComponent,
-    EditPostComponent,
+    EditPostComponent
   ],
   imports: [
     BrowserModule,
