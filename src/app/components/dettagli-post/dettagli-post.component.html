@@ -1,7 +1,7 @@
 <div class="container mt-5">
     <h2 class="mb-5 text-center">Details post</h2>
     <div class="card">
-        <h4 class="card-header">Post</h4>
+        <h4 class="card-header border-0">{{ p!.title }}</h4>
         <div class="card-body">
             <div class="container d-flex justify-content-center" id="loading">
                 <div class="spinner-border d-flex justify-content-center" role="status" *ngIf="loading">
@@ -9,9 +9,33 @@
                 </div>
             </div>
             <p class="card-text">{{ p!.id }}</p>
-            <h5 class="card-title">{{ p!.title }}</h5>
-            <p class="card-text">{{ p!.body }}</p>
+            <div class="row">
+                <div class="col-6">
+                    <h3>Descrizione:</h3>
+                    <p class="card-text">{{ p!.body }}</p>
+                </div>
+                <div class="col-6">
+                    <ngb-carousel class="w-75 pt-5 ms-5">
+                        <ng-template ngbSlide>
+                            <div class="picsum-img-wrapper">
+                                <img class="img-fluid" src="{{p!.img1}}" alt="Random first slide" />
+                            </div>
+                        </ng-template>
+                        <ng-template ngbSlide>
+                            <div class="picsum-img-wrapper">
+                                <img class="img-fluid" src="{{p!.img2}}" alt="Random second slide" />
+                            </div>
+                        </ng-template>
+                        <ng-template ngbSlide>
+                            <div class="picsum-img-wrapper">
+                                <img class="img-fluid" src="{{p!.img3}}" alt="immagine non trovata" />
+                            </div>
+                        </ng-template>
+                    </ngb-carousel>
+                </div>
+            </div>
         </div>
     </div>
-    <button type="button" class="btn btn-primary mt-4 text-white fs-5" [routerLink]="['/post']" routerLinkActive="router-link-active"><i class="bi bi-arrow-left"></i></button>
+    <button type="button" class="btn btn-primary mt-4 text-white fs-5" [routerLink]="['/post']"
+        routerLinkActive="router-link-active"><i class="bi bi-arrow-left"></i></button>
 </div>

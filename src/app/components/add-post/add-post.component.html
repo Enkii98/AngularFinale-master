@@ -1,12 +1,24 @@
 <div class="container text-center mt-5">
     <form #form="ngForm" (ngSubmit)="publica(form)">
             <div class="mb-4 form-group">
-                <label for="title" class="form-label mb-3 fs-4">Inserisci titolo</label>
+                <label for="title" class="form-label mb-3 fs-4">Titolo</label>
                 <input name="title" type="text" class="form-control" id="title" required ngModel >
             </div>
             <div class="form-group">
-                <label for="body" class="form-label mb-3 fs-4">Inserisci contenuto</label>
+                <label for="body" class="form-label mb-3 fs-4">Descrizione ricetta</label>
                 <input type="body" name="body" class="form-control" id="body" required ngModel >
+            </div>
+            <div class="form-group">
+                <label for="img1" class="form-label mb-3 fs-4">Immagine 1</label>
+                <input type="img1" name="img-1" class="form-control" id="img1" required ngModel >
+            </div>
+            <div class="form-group">
+                <label for="img2" class="form-label mb-3 fs-4">Immagine 2</label>
+                <input type="img2" name="img-2" class="form-control" id="img2" required ngModel >
+            </div>
+            <div class="form-group">
+                <label for="img3" class="form-label mb-3 fs-4">Immagine 3</label>
+                <input type="img3" name="img-3" class="form-control" id="img3" required ngModel >
             </div>
             <button type="submit" class="btn btn-success mt-4" [disabled]="form.invalid">Publish</button>
     </form>

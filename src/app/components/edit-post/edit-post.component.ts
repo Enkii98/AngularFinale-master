@@ -38,7 +38,10 @@ export class EditPostComponent implements OnInit {
             id: this.p!.id,
             title: this.p!.title,
             body: this.p!.body,
-            userId: this.p!.userId
+            userId: this.p!.userId,
+            img1: this.p!.img1,
+            img2: this.p!.img2,
+            img3: this.p!.img3
         }
         console.log(post);
         this.pstSrv.updatePost(post).subscribe();
