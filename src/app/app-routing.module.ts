@@ -11,6 +11,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { PrimiPiattiComponent } from './components/primi-piatti/primi-piatti.component';
+import { SecondiPiattiComponent } from './components/secondi-piatti/secondi-piatti.component';
+import { AntipastiComponent } from './components/antipasti/antipasti.component';
+import { DolciComponent } from './components/dolci/dolci.component';
 
 const routes: Routes = [
     {
@@ -44,6 +48,22 @@ const routes: Routes = [
     {
         path: "edit/:id",
         component: EditPostComponent
+    },
+    {
+        path: "antipasti",
+        component: AntipastiComponent
+    },
+    {
+        path: "primiPiatti",
+        component: PrimiPiattiComponent
+    },
+    {
+        path: "secondiPiatti",
+        component: SecondiPiattiComponent
+    },
+    {
+        path: "dolci",
+        component: DolciComponent
     },
     {
         path: "**",

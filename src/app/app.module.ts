@@ -12,6 +12,12 @@ import { DettagliPostComponent } from './components/dettagli-post/dettagli-post.
 import { AddPostComponent } from './components/add-post/add-post.component';
 import { EditPostComponent } from './components/edit-post/edit-post.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FooterComponent } from './components/footer/footer.component';
+import { PrimiPiattiComponent } from './components/primi-piatti/primi-piatti.component';
+import { SecondiPiattiComponent } from './components/secondi-piatti/secondi-piatti.component';
+import { AntipastiComponent } from './components/antipasti/antipasti.component';
+import { DolciComponent } from './components/dolci/dolci.component';
+import { CardHomeComponent } from './components/card-home/card-home.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +28,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     DettagliPostComponent,
     AddPostComponent,
     EditPostComponent,
+    FooterComponent,
+    PrimiPiattiComponent,
+    SecondiPiattiComponent,
+    AntipastiComponent,
+    DolciComponent,
+    CardHomeComponent,
   ],
   imports: [
     BrowserModule,

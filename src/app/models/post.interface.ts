@@ -1,6 +1,9 @@
 export interface Post {
-    userId: number,
     id: number,
     title: string,
-    body: string
+    body: string,
+    img1: string,
+    ingredienti: any,
+    ricetta: string,
+    categoria: string
 }

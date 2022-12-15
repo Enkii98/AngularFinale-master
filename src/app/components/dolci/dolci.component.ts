@@ -6,11 +6,11 @@ import { PostsService } from 'src/app/service/posts.service';
 import { Router } from '@angular/router';
 
 @Component({
-    selector: 'app-post',
-    templateUrl: './post.component.html',
-    styleUrls: ['./post.component.scss']
+  selector: 'app-dolci',
+  templateUrl: './dolci.component.html',
+  styleUrls: ['./dolci.component.scss']
 })
-export class PostComponent implements OnInit {
+export class DolciComponent implements OnInit {
 
     sub!: Subscription
     posts: Post[] | undefined
@@ -19,11 +19,11 @@ export class PostComponent implements OnInit {
     constructor(private http: HttpClient, private pstSrv: PostsService, private router: Router) { }
 
     ngOnInit(): void {
-        this.getPost();
+        this.getDolci();
     }
 
-    getPost() {
-        this.sub = this.pstSrv.getPosts().subscribe((ris) => {
+    getDolci() {
+        this.sub = this.pstSrv.getDolci().subscribe((ris) => {
             this.posts = ris;
             this.loading = false;
         })
@@ -31,6 +31,7 @@ export class PostComponent implements OnInit {
 
     cancella(id: number) {
         this.http.delete('http://localhost:4201/posts/' + id).subscribe();
+        this.http.delete('http://localhost:4201/dolci/' + id).subscribe();
         location.reload();
     }
 

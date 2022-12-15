@@ -29,6 +29,18 @@ export class EditPostComponent implements OnInit {
                     return false
                 }
             })
+        });
+        let y = this.ar.snapshot.params["id"];
+        this.pstSrv.getPrimi().subscribe((post: Post[]) => {
+            this.loading = false;
+            this.p = post.find((element) => {
+                if(y == element.id) {
+                    return true
+                }
+                else {
+                    return false
+                }
+            })
         })
     }
 
@@ -38,10 +50,14 @@ export class EditPostComponent implements OnInit {
             id: this.p!.id,
             title: this.p!.title,
             body: this.p!.body,
-            userId: this.p!.userId
+            img1: this.p!.img1,
+            ingredienti: this.p!.ingredienti,
+            ricetta: this.p!.ricetta,
+            categoria: this.p!.categoria
         }
         console.log(post);
         this.pstSrv.updatePost(post).subscribe();
+        this.pstSrv.updatePrimi(post).subscribe();
         this.router.navigate(['/post']);
     }
 
