@@ -10,9 +10,9 @@
 .pointer {
     cursor: pointer;
     font-weight: 500;
-    // &:hover {
-    //     font-weight: bold;
-    // }
+    &:hover {
+        font-weight: bold;
+    }
 }
 
 .rotate {
@@ -20,6 +20,10 @@
     &:hover {
         transform: rotate(360deg);;
     }
+}
+
+#back {
+    background-color: purple;
 }
 
 .text-poison { color: purple;}

@@ -17,6 +17,7 @@ import { PrimiPiattiComponent } from './components/primi-piatti/primi-piatti.com
 import { SecondiPiattiComponent } from './components/secondi-piatti/secondi-piatti.component';
 import { AntipastiComponent } from './components/antipasti/antipasti.component';
 import { DolciComponent } from './components/dolci/dolci.component';
+import { CardHomeComponent } from './components/card-home/card-home.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { DolciComponent } from './components/dolci/dolci.component';
     SecondiPiattiComponent,
     AntipastiComponent,
     DolciComponent,
+    CardHomeComponent,
   ],
   imports: [
     BrowserModule,

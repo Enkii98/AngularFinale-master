@@ -1,5 +1,6 @@
 #home {
     margin-top: 100px;
+    padding: 20px 0;
 }
 
 #ricette {
@@ -8,4 +9,28 @@
 
 #aggiungi {
     background-color: purple;
+}
+
+.carousel-item img {
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#link a {
+    color: purple;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.text {
+    color: purple;
+}
+
+.textS {
+    text-decoration: none;
+    color: rgb(99, 1, 99);
 }

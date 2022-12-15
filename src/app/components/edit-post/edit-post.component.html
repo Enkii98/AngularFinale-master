@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
-<div class="container" id="edit">
+<div class="container bg-light rounded mb-4" id="edit">
     <div class="container text-center">
-        <h2 class="mb-5">Cambia ricetta</h2>
+        <h2 class="mb-4" id="cambiaRicetta">Cambia ricetta</h2>
         <div class="container d-flex justify-content-center mb-3" id="loading">
             <div class="spinner-border d-flex justify-content-center" role="status" *ngIf="loading">
                 <span class="visually-hidden">Loading...</span>
@@ -34,7 +34,6 @@
                         <option value="antipasti">Antipasti</option>
                         <option value="primi">Primi</option>
                         <option value="secondi">Secondi</option>
-                        <option value="contorni">Contorni</option>
                         <option value="dolci">Dolci</option>
                     </select>
                 </div>
@@ -42,7 +41,7 @@
         </form>
     </div>
     <div class="container">
-      <button type="button" class="btn btn-primary mt-5 text-white fs-5" [routerLink]="['/post']" routerLinkActive="router-link-active"><i class="bi bi-arrow-left"></i></button>
+      <button type="button" class="btn mt-5 text-white fs-5" [routerLink]="['/post']" routerLinkActive="router-link-active" id="back"><i class="bi bi-arrow-left"></i></button>
     </div>
+    <app-footer></app-footer>
 </div>
-<app-footer></app-footer>
