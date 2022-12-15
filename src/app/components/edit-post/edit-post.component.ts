@@ -49,7 +49,7 @@ export class EditPostComponent implements OnInit {
             id: this.p!.id,
             title: this.p!.title,
             body: this.p!.body,
-            userId: this.p!.userId,
+            img1: this.p!.img1,
             ingredienti: this.p!.ingredienti,
             ricetta: this.p!.ricetta,
             categoria: this.p!.categoria

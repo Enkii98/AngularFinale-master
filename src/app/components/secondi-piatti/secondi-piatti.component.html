@@ -7,19 +7,23 @@
             </div>
         </div>
         <h2 class="title text-center mt-2">Ricette di secondi piatti gustosi:</h2>
-        <div class="card my-4" *ngFor="let post of posts">
-            <div class="card-body">
-                <h3 class="card-title fw-bold">{{ post.title }}</h3>
-                <p class="card-text">{{ post.body }}</p>
-                <div class="container text-center mt-4 mb-2">
-                    <button type="button" class="btn btn-success me-4 text-white fs-5 rounded-circle"
-                        [routerLink]="['/edit', post.id]" routerLinkActive="router-link-active"><i
-                            class="bi bi-pencil"></i></button>
-                    <button type="button" class="btn btn-warning text-white me-4 rounded-pill"
-                        [routerLink]="['/dettagli', post.id]" routerLinkActive="router-link-active">Leggi ricetta <i
-                            class="bi bi-chevron-right"></i></button>
-                    <button type="button" class="btn btn-danger text-white fs-5 rounded-circle"
-                        (click)="cancella(post.id)"><i class="bi bi-trash3"></i></button>
+        <div class="row">
+            <div class="col-3 card d-flex mx-3 mb-3 mt-4 px-0" *ngFor="let post of posts" style="width: 18rem;">
+                <img src="{{ post.img1 }}" class="card-img-top img-fluid" alt="{{ post.title }}">
+                <div class="card-body">
+                    <h4 class="card-title fw-bold">{{ post.title }}</h4>
+                    <p class="card-text">{{post.body}}</p>
+                    <p>Categoria: {{post.categoria | uppercase}}</p>
+                    <div class="container text-center mt-4 mb-2">
+                        <button type="button" class="btn btn-success me-4 text-white fs-5 rounded-circle"
+                            [routerLink]="['/edit', post.id]" routerLinkActive="router-link-active"><i
+                                class="bi bi-pencil"></i></button>
+                        <button type="button" class="btn btn-danger text-white fs-5 rounded-circle"
+                            (click)="cancella(post.id)"><i class="bi bi-trash3"></i></button>
+                        <button type="button" class="btn btn-warning text-white mt-4 rounded-pill"
+                            [routerLink]="['/dettagli', post.id]" routerLinkActive="router-link-active">Leggi ricetta <i
+                                class="bi bi-chevron-right"></i></button>
+                    </div>
                 </div>
             </div>
         </div>
