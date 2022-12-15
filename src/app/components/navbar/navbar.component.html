@@ -15,19 +15,19 @@
                     Ricette <span><i class="fa-sharp fa-solid fa-chevron-down"></i></span>
                 </button>
                 <ul class="dropdown-menu rounded-bottom pe-2">
-                    <li><a class="dropdown-item fw-bold" href="#"><span><i
+                    <li><a class="dropdown-item fw-bold" [routerLink]="['/post']" routerLinkActive="active"><span><i
                                     class="fa-solid fa-utensils me-3 fs-5"></i></span> Tutte le ricette</a></li>
-                    <li><a class="dropdown-item ms-2 fw-bold" href="#"><span class="me-4 second"></span> Primi
-                            piatti</a></li>
-                    <li><a class="dropdown-item ms-2 fw-bold" href="#"><span class="me-4 second"></span> Antipasti</a>
+                    <li><a class="dropdown-item ms-2 fw-bold" [routerLink]="['/antipasti']"
+                        routerLinkActive="active"><span class="me-4 second"></span> Antipasti</a>
                     </li>
-                    <li><a class="dropdown-item ms-2 fw-bold" href="#"><span class="me-4 second"></span> Secondi
+                    <li><a class="dropdown-item ms-2 fw-bold" [routerLink]="['/primiPiatti']"
+                            routerLinkActive="active"><span class="me-4 second"></span> Primi
                             piatti</a></li>
-                    <li><a class="dropdown-item ms-2 fw-bold" href="#"><span class="me-4 second"></span> Dolci</a></li>
-                    <li><a class="dropdown-item ms-2 fw-bold" href="#"><span class="me-4 second"></span> Lievitati</a>
-                    </li>
-                    <li><a class="dropdown-item ms-2 fw-bold" href="#"><span class="me-4 second"></span> Piatti
-                            unici</a></li>
+                    <li><a class="dropdown-item ms-2 fw-bold" [routerLink]="['/secondiPiatti']"
+                        routerLinkActive="active"><span class="me-4 second"></span> Secondi
+                            piatti</a></li>
+                    <li><a class="dropdown-item ms-2 fw-bold" [routerLink]="['/dolci']"
+                        routerLinkActive="active"><span class="me-4 second"></span> Dolci</a></li>
                 </ul>
             </div>
         </div>
@@ -41,23 +41,24 @@
                 <form class="mb-4 ms-3">
                     <input type="text" placeholder="Cerca una ricetta"
                         class="border border-secondary text-secondary rounded-4 py-2 px-4">
-                    <button type="button" class="btn btn-light rounded-pill py-2 px-4 ms-2"><i class="bi bi-search"></i></button>
+                    <button type="button" class="btn btn-light rounded-pill py-2 px-4 ms-2"><i
+                            class="bi bi-search"></i></button>
                 </form>
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 ms-3">
                     <li class="nav-item">
                         <a class="nav-link" [routerLink]="['/']" routerLinkActive="active"
-                            [routerLinkActiveOptions]="{ exact: true }"><i class="bi bi-house-door fs-5 me-3"></i> Home</a>
+                            [routerLinkActiveOptions]="{ exact: true }"><i class="bi bi-house-door fs-5 me-3"></i>
+                            Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" [routerLink]="['/post']" routerLinkActive="active"><i
-                            class="fa-solid fa-utensils fs-5 me-3"></i> Ricette</a>
+                                class="fa-solid fa-utensils fs-5 me-3"></i> Ricette</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link"><i class="bi bi-clock fs-5 me-3"></i> Ultime ricette</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link"><i
-                            class="fa-solid fa-utensils fs-5 me-3"></i> Ricette veloci</a>
+                        <a class="nav-link"><i class="fa-solid fa-utensils fs-5 me-3"></i> Ricette veloci</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link"><i class="bi bi-arrow-right-circle fs-5 me-3"></i> Cucina cinese</a>
@@ -96,17 +97,25 @@
                     <hr>
                     <p class="text-secondary mt-5 fw-bold" id="app">SCARICA L'APP</p>
                     <div class="container" id="scarica">
-                        <button type="button" class="btn btn-dark text-white fw-bold py-2"><img src="../../../assets/Apple_2.png" alt="logo apple" width="35px" class="me-3">App Store</button>
-                        <button type="button" class="btn btn-dark text-white fw-bold py-2 mt-3"><img src="../../../assets/google play.png" alt="Google Play" width="35px" class="me-3">Google Play</button>
+                        <button type="button" class="btn btn-dark text-white fw-bold py-2"><i class="bi bi-apple me-3 fs-4"></i>App
+                            Store</button>
+                        <button type="button" class="btn btn-dark text-white fw-bold py-2 mt-3"><i class="bi bi-google-play me-3 fs-4"></i>Google
+                            Play</button>
                     </div>
                     <p class="text-secondary mt-5 fw-bold" id="app">SEGUICI</p>
                     <div class="container" id="seguici">
-                        <button type="button" class="btn btn-light me-3 pe-3"><i class="bi bi-facebook me-3"></i>Facebook</button>
-                        <button type="button" class="btn btn-light"><i class="bi bi-pinterest me-3"></i> Pinterest</button>
-                        <button type="button" class="btn btn-light me-3 mt-3"><i class="fab fa-instagram me-3"></i> Instagram</button>
-                        <button type="button" class="btn btn-light mt-3 pe-4"><i class="bi bi-tiktok me-3"></i> TikTok</button>
-                        <button type="button" class="btn btn-light me-3 mt-3 pe-3"><i class="bi bi-youtube me-3"></i> YouTube</button>
-                        <button type="button" class="btn btn-light mt-3 pe-4"><i class="bi bi-twitter me-3"></i> Twitter</button>
+                        <button type="button" class="btn btn-light me-3 pe-3"><i
+                                class="bi bi-facebook me-3"></i>Facebook</button>
+                        <button type="button" class="btn btn-light"><i class="bi bi-pinterest me-3"></i>
+                            Pinterest</button>
+                        <button type="button" class="btn btn-light me-3 mt-3"><i class="fab fa-instagram me-3"></i>
+                            Instagram</button>
+                        <button type="button" class="btn btn-light mt-3 pe-4"><i class="bi bi-tiktok me-3"></i>
+                            TikTok</button>
+                        <button type="button" class="btn btn-light me-3 mt-3 pe-3"><i class="bi bi-youtube me-3"></i>
+                            YouTube</button>
+                        <button type="button" class="btn btn-light mt-3 pe-4"><i class="bi bi-twitter me-3"></i>
+                            Twitter</button>
                     </div>
                 </ul>
             </div>

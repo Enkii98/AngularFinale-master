@@ -30,6 +30,17 @@ export class EditPostComponent implements OnInit {
                 }
             })
         })
+        this.pstSrv.getPrimi().subscribe((post: Post[]) => {
+            this.loading = false;
+            this.p = post.find((element) => {
+                if(x == element.id) {
+                    return true
+                }
+                else {
+                    return false
+                }
+            })
+        })
     }
 
     update(form: NgForm) {
@@ -44,6 +55,7 @@ export class EditPostComponent implements OnInit {
             categoria: this.p!.categoria
         }
         console.log(post);
+        this.pstSrv.updatePrimi(post).subscribe();
         this.pstSrv.updatePost(post).subscribe();
         this.router.navigate(['/post']);
     }

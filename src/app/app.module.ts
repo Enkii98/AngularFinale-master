@@ -13,6 +13,10 @@ import { AddPostComponent } from './components/add-post/add-post.component';
 import { EditPostComponent } from './components/edit-post/edit-post.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FooterComponent } from './components/footer/footer.component';
+import { PrimiPiattiComponent } from './components/primi-piatti/primi-piatti.component';
+import { SecondiPiattiComponent } from './components/secondi-piatti/secondi-piatti.component';
+import { AntipastiComponent } from './components/antipasti/antipasti.component';
+import { DolciComponent } from './components/dolci/dolci.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +28,10 @@ import { FooterComponent } from './components/footer/footer.component';
     AddPostComponent,
     EditPostComponent,
     FooterComponent,
+    PrimiPiattiComponent,
+    SecondiPiattiComponent,
+    AntipastiComponent,
+    DolciComponent,
   ],
   imports: [
     BrowserModule,
