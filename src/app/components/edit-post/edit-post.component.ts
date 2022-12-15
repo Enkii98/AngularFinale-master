@@ -29,11 +29,12 @@ export class EditPostComponent implements OnInit {
                     return false
                 }
             })
-        })
+        });
+        let y = this.ar.snapshot.params["id"];
         this.pstSrv.getPrimi().subscribe((post: Post[]) => {
             this.loading = false;
             this.p = post.find((element) => {
-                if(x == element.id) {
+                if(y == element.id) {
                     return true
                 }
                 else {
@@ -55,8 +56,8 @@ export class EditPostComponent implements OnInit {
             categoria: this.p!.categoria
         }
         console.log(post);
-        this.pstSrv.updatePrimi(post).subscribe();
         this.pstSrv.updatePost(post).subscribe();
+        this.pstSrv.updatePrimi(post).subscribe();
         this.router.navigate(['/post']);
     }
 

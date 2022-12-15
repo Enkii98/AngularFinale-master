@@ -41,5 +41,9 @@ export class PostsService {
     updatePrimi(post: Post) {
         return this.http.put<Post>(`http://localhost:4201/primiPiatti/${post.id}`, post);
     }
+
+    updateSecondi(post: Post) {
+        return this.http.put<Post>(`http://localhost:4201/secondiPiatti/${post.id}`, post);
+    }
 }
 
