@@ -4,7 +4,7 @@ export interface Post {
     title: string,
     body: string
     img1: any,
-    ingredienti: string,
+    ingredienti: any,
     categoria: string,
     ricetta: string
 }

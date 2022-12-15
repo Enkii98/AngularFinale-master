@@ -13,6 +13,12 @@
                 <div class="col-6">
                     <h3>Descrizione:</h3>
                     <p class="card-text">{{ p!.body }}</p>
+                    <h3>Ingredienti:</h3>
+                    <ul>
+                        <li *ngFor="let ing of p!.ingredienti">{{ing.nome}} {{ing.quantita}}</li>
+                    </ul>
+                    <h3>Procedimento:</h3>
+                    <p>{{p!.ricetta}}</p>
                 </div>
                 <div class="col-6">
                     <ngb-carousel class="w-75 pt-5 ms-5">
